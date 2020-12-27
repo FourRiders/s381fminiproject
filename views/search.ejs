@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<h1>Search</h1>
+
+<form method="GET" action="/testdisplay">
+  <label for="name">Player name:</label>
+  <select name="name" id="name">
+    
+
+    <% restaurant.forEach( r => { if (r.name != "") { %>
+      <option value="<%=r.name%>" ><%=r.name%></option>
+      <% }}) %>
+  </select>
+  <br>
+  <button class="button is-link" type ="submit">Search</button>
+</form>
+<form method="GET" action="/create">
+  <button type="create" >Create</button>    
+ </form>
+<form method="GET" action="/delete">
+ <button type="delete">Delete</button>
+</form>
+<form method="GET" action="/login">
+  <button type="login">Logout</button>
+ </form>
+
+<br><br>
+
+</body>
+</html>

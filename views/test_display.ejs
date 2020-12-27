@@ -1,0 +1,29 @@
+<html>
+<h1>Your Result</h1>
+
+<ul>
+    <% restaurant.forEach(function(restaurant){ %>
+     <li> <strong> <%= restaurant.name %> </strong> </li>
+       
+        <ul>
+          <% Object.keys(restaurant).forEach(function(key){ %>
+          <li><strong><%=key%></strong> : <%= restaurant[key] %></li>
+          <% }); %>
+        </ul>
+        <% }); %>
+        
+  </ul>
+
+  <form method="GET" action="/create">
+    <button type="create" >Create</button>    
+   </form>
+  <form method="GET" action="/delete">
+   <button type="delete">Delete</button>
+  </form>
+  <form method="GET" action="/login">
+    <button type="login">Logout</button>
+   </form>
+
+
+   
+  </html>

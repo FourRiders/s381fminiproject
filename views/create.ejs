@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>New restaurant</title>
+    </head>
+
+
+    <body>
+        <h1> Here is create new restaurant from  </h1>
+
+        <form action="/create" method="POST">
+        <input type="text" placeholder="restaurant_id" name="restaurant_id">
+        <input type="text" placeholder="name" name="name" required></br>
+        <input type="text" placeholder="borough" name="borough">
+        <input type="text" placeholder="cuisine" name="cuisine"></br>
+        <input type="text" placeholder="street" name="street">
+        <input type="text" placeholder="building" name="building"></br>
+        <input type="text" placeholder="zipcode" name="zipcode">
+        <input type="text" placeholder="Owner" name="Owner"required></br>
+        <input type="text" placeholder="coordinate(X-aixs)" name="coordinate(X-aixs)">
+        <input type="text" placeholder="coordinate(Y-aixs)" name="coordinate(Y-aixs)"></br>
+        <input type="file" id="Restaurant_Photo" name="Restaurant Photo">
+        
+      
+
+        <button type="submit">Submit</button>
+        </form>
+       
+
+        <h2> create </h2>
+
+        <ul class="create">
+        <!-- Loop through create -->
+        <% for(var i = 0; i < create.length; i++) {%>
+                <li class="create">
+                <!-- Output name from the iterated quote object -->
+                <span><%= create[i].name %></span>:
+                <!-- Output quote from the iterated quote object -->
+                <span><%= create[i].quote %></span>
+                </li>
+            <% } %>
+        </ul>
+
+        
+
+        <script src="/main.js"></script>
+
+    </body>
+
+</html>

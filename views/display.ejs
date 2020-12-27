@@ -1,0 +1,17 @@
+<h1>LOL</h1>
+
+<ul>
+    <% restaurant.forEach(function(restaurant){ %>
+     <li> <%= restaurant.name %></li>
+       
+        <ul>
+          <% Object.keys(restaurant).forEach(function(key){ %>
+          <li><strong><%=key%></strong> : <%= restaurant[key] %></li>
+          <% }); %>
+          
+        </ul>
+        <% }); %>
+  </ul>
+
+
+  
